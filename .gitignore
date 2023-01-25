@@ -1018,3 +1018,4 @@ test/
 
 # Models
 *.h5
+!/app/static/scripts/
