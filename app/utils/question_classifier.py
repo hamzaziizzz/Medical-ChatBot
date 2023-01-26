@@ -6,9 +6,9 @@ class QuestionClassifier:
     def __init__(self):
         current_directory = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
-        self.diseases_path = os.path.join(current_directory, "C:\\Users\\hamza\\PycharmProjects\\MedicalChatbot\\app\\static\\dictionary\\diseases.txt")
-        self.departments_path = os.path.join(current_directory, "C:\\Users\\hamza\\PycharmProjects\\MedicalChatbot\\app\\static\\dictionary\\departments.txt")
-        self.symptoms_path = os.path.join(current_directory, "C:\\Users\\hamza\\PycharmProjects\\MedicalChatbot\\app\\static\\dictionary\\symptoms.txt")
+        self.diseases_path = os.path.join(current_directory, "..\\static\\dictionary\\diseases.txt")
+        self.departments_path = os.path.join(current_directory, "..\\static\\dictionary\\departments.txt")
+        self.symptoms_path = os.path.join(current_directory, "..\\static\\dictionary\\symptoms.txt")
 
         self.disease_words = [i.strip() for i in open(self.diseases_path, 'r', encoding="gbk") if i.strip()]
         self.department_words = [i.strip() for i in open(self.departments_path, 'r', encoding="gbk") if i.strip()]

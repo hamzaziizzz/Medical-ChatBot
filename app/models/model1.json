@@ -38,11 +38,11 @@
                 "config": {
                     "name": "embedding",
                     "trainable": false,
+                    "dtype": "float32",
                     "batch_input_shape": [
                         null,
                         130
                     ],
-                    "dtype": "float32",
                     "input_dim": 91015,
                     "output_dim": 300,
                     "embeddings_initializer": {
@@ -306,6 +306,6 @@
             ]
         ]
     },
-    "keras_version": "2.9.0",
+    "keras_version": "2.11.0",
     "backend": "tensorflow"
 }

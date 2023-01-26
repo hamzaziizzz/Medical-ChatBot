@@ -1,8 +1,8 @@
 import json
 
 from keras.models import model_from_json
-from keras_preprocessing.sequence import pad_sequences
-from keras_preprocessing.text import Tokenizer, text_to_word_sequence
+from keras.utils import pad_sequences
+from keras.preprocessing.text import Tokenizer, text_to_word_sequence
 
 from app.utils.answer_search import *
 from app.utils.question_classifier import *
@@ -21,7 +21,7 @@ window_size = "800x800"
 
 # ============================ SIAMESE MODEL ============================
 def load_siamese_model():
-    json_file = open("..\\app\\models\\model.json")
+    json_file = open("..\\models\\model2.json")
     loaded_model_json = json_file.read()
     json_file.close()
 
@@ -29,9 +29,10 @@ def load_siamese_model():
     model = model_from_json(loaded_model_json)
 
     # load weights
-    model.load_weights("..\\app\\models\\question_pairs_weights.h5")
+    model.load_weights("..\\models\\question_pairs_weights.h5")
 
     return model
+
 
 def convert_text_to_index_array(text, dictionary):
     words = text_to_word_sequence(text)
@@ -44,10 +45,11 @@ def convert_text_to_index_array(text, dictionary):
 
     return word_indices
 
+
 def find_if_duplicate_questions(question_1, question_2):
     tokenizer = Tokenizer(num_words=100000)
 
-    with open("..\\app\\models\\dictionary.json", 'r') as dictionary_file:
+    with open("..\\models\\dictionary.json", 'r') as dictionary_file:
         dictionary = json.load(dictionary_file)
 
     max_sequence_length = 130
@@ -65,6 +67,7 @@ def find_if_duplicate_questions(question_1, question_2):
 
     return prediction
 # ============================ END SIAMESE MODEL ============================
+
 
 def find_similar_question(sent):
     with open("..\\data\\questions.json", encoding="utf-8", errors="ignore") as file:
@@ -395,7 +398,7 @@ class ChatInterface(Frame):
         self.send_button_frame.config(bg="#003333")
         self.send_button.config(
             bg="#669999", fg="#FFFFFF", activebackground="#669999", activeforeground="#FFFFFF")
-        # self.emoji_button.config(bg="#669999", fg="#FFFFFF", activebackground="#669999", activeforeground="#FFFFFF")
+        self.emoji_button.config(bg="#669999", fg="#FFFFFF", activebackground="#669999", activeforeground="#FFFFFF")
         self.sent_label.config(bg="#003333", fg="#FFFFFF")
 
         self.tl_bg = "#669999"
