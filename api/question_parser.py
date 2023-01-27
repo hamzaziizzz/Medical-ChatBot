@@ -98,7 +98,3 @@ class QuestionParser:
                 sqls.append(_sql)
 
         return sqls
-
-
-if __name__ == "__main__":
-    question_parser = QuestionParser()

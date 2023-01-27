@@ -480,7 +480,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 ### JupyterNotebooks template
-# gitignore template for Jupyter Notebooks
+# gitignore templates for Jupyter Notebooks
 # website: http://jupyter.org/
 
 .ipynb_checkpoints
@@ -522,7 +522,7 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
+#  Usually these files are written by a python script from a templates
 #  before PyInstaller builds the exe,  so as to inject date/other infos into it.
 *.manifest
 *.spec
@@ -644,7 +644,7 @@ dmypy.json
 cython_debug/
 
 # PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  JetBrains specific templates is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
@@ -718,9 +718,9 @@ pyvenv.cfg
 pip-selfcheck.json
 
 ### Vue template
-# gitignore template for Vue.js projects
+# gitignore templates for Vue.js projects
 #
-# Recommended template: Node.gitignore
+# Recommended templates: Node.gitignore
 
 # TODO: where does this rule come from?
 docs/_book
@@ -915,7 +915,7 @@ test/
 # JetBrains Rider
 
 ### JupyterNotebooks template
-# gitignore template for Jupyter Notebooks
+# gitignore templates for Jupyter Notebooks
 # website: http://jupyter.org/
 
 
@@ -932,7 +932,7 @@ test/
 # Distribution / packaging
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
+#  Usually these files are written by a python script from a templates
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 
 # Installer logs
@@ -1005,7 +1005,7 @@ test/
 # Cython debug symbols
 
 # PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  JetBrains specific templates is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.

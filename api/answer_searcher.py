@@ -70,7 +70,3 @@ class AnswerSearcher:
                 final_answers.append(final_answer)
 
         return final_answers
-
-
-if __name__ == "__main__":
-    searcher = AnswerSearcher()

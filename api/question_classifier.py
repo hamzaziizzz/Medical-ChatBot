@@ -4,11 +4,12 @@ import ahocorasick
 
 class QuestionClassifier:
     def __init__(self):
-        current_directory = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+        current_directory = '\\'.join(os.path.abspath(__file__).split('\\')[:-1])
+        print(current_directory)
 
-        self.diseases_path = os.path.join(current_directory, "..\\static\\dictionary\\diseases.txt")
-        self.departments_path = os.path.join(current_directory, "..\\static\\dictionary\\departments.txt")
-        self.symptoms_path = os.path.join(current_directory, "..\\static\\dictionary\\symptoms.txt")
+        self.diseases_path = os.path.join(current_directory, ".\\dictionary\\diseases.txt")
+        self.departments_path = os.path.join(current_directory, ".\\dictionary\\departments.txt")
+        self.symptoms_path = os.path.join(current_directory, ".\\dictionary\\symptoms.txt")
 
         self.disease_words = [i.strip() for i in open(self.diseases_path, 'r', encoding="gbk") if i.strip()]
         self.department_words = [i.strip() for i in open(self.departments_path, 'r', encoding="gbk") if i.strip()]
@@ -235,12 +236,3 @@ class QuestionClassifier:
         data["question_types"] = question_types
 
         return data
-
-
-if __name__ == "__main__":
-    question_classifier = QuestionClassifier()
-
-    while True:
-        user_question = input("Enter your question: ")
-        user_data = question_classifier.classify(user_question)
-        print(user_data)

@@ -11,7 +11,7 @@ class MedicalGraph:
         departments, diseases, symptoms, disease_information = [], [], [], []
         department_relationship, symptoms_relationship, accompany_relationship, category_relationship = [], [], [], []
 
-        file = "..\\data\\medical.csv"
+        file = "./data/medical.csv"
         dataframe = pd.read_csv(file, encoding="utf-8")
         dataframe.drop(['S.No.'], axis=1, inplace=True)
 
@@ -123,9 +123,9 @@ class MedicalGraph:
     def export_data(self):
         departments, symptoms, diseases, disease_information, department_relationship, symptoms_relationship, accompany_relationship, category_relationship = self.read_nodes()
 
-        f_department = open("..\\static\\dictionary\\departments.txt", 'w+', encoding="utf-8")
-        f_symptom = open("..\\static\\dictionary\\symptoms.txt", 'w+', encoding="utf-8")
-        f_disease = open("..\\static\\dictionary\\diseases.txt", 'w+', encoding="utf-8")
+        f_department = open("./dictionary/departments.txt", 'w+', encoding="utf-8")
+        f_symptom = open("./dictionary/symptoms.txt", 'w+', encoding="utf-8")
+        f_disease = open("./dictionary/diseases.txt", 'w+', encoding="utf-8")
 
         f_department.write('\n'.join(list(departments)))
         f_symptom.write('\n'.join(list(symptoms)))
