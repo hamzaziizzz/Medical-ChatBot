@@ -1,43 +1,43 @@
-respiratory medicine
-psychiatric
-pediatrics
-cardiology
-general surgery
-oncology
-anorectal
+hepatopathy
 heart and thoracic surgery
-emergency department
-pediatric medicine
-internal
-dermatology
-digestive internal medicine
-hepatobiliary surgery
-obstetrics
-other synthesis
-other departments
-infectious branch
-genetic diseases
-internal medicine
-pediatric surgery
-nutrition section
+tumor surgery
+dermatology department
 rheum immunology
-surgery
 endocrinology
-urology
-hematology
+other synthesis
+pediatric medicine
 otolaryngology
+ent
+orthopaedic surgery
+respiratory medicine
+infectious branch
+internal
+andrology
+dermatology
+obstetrics
+emergency department
+other departments
+kidney department
+oncology
+genetic diseases
+neurology
 gynecology
 neurosurgery
-tumor surgery
-orthopaedic surgery
-kidney department
-neurology
-rehabilitation
-andrology
-pediatric synthesis
-hepatopathy
+urology
+psychiatric
 stomatology
-dermatology department
-ent
+digestive internal medicine
 gynecology and obstetrics
+rehabilitation
+anorectal
+pediatric surgery
+pediatrics
+internal medicine
 ophthalmology
+nutrition section
+general surgery
+hematology
+hepatobiliary surgery
+pediatric synthesis
+cardiology
+surgery

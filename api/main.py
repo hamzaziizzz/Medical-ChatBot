@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, request
 from flask_cors import CORS
 
@@ -9,7 +11,7 @@ CORS(application)
 handler = ChatBotGraph()
 
 
-@application.route("/")
+@application.route("/", methods=["GET", "POST"])
 def home():
     search_term = request.args.get("search", '')
 
@@ -19,7 +21,4 @@ def home():
     }
     # print(data)
 
-    request.json.dumps(data)
-
-
-application.run(debug=True)
+    return json.dumps(data)

@@ -3,7 +3,7 @@ from py2neo import Graph
 
 class AnswerSearcher:
     def __init__(self):
-        self.graph = Graph("neo4j://localhost:7686", auth=("neo4j", "dob@23august2001"))
+        self.graph = Graph("neo4j://localhost:7687", auth=("neo4j", "dob@23august2001"))
         self.num_limit = 20
 
     def answer_prettify(self, question_type, answers):
@@ -70,3 +70,7 @@ class AnswerSearcher:
                 final_answers.append(final_answer)
 
         return final_answers
+
+
+if __name__ == "__main__":
+    searcher = AnswerSearcher()
