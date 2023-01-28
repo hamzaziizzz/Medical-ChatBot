@@ -236,11 +236,3 @@ class QuestionClassifier:
         data["question_types"] = question_types
 
         return data
-
-
-if __name__ == '__main__':
-    handler = QuestionClassifier()
-    while True:
-        question = input('Enter a question:')
-        data = handler.classify(question)
-        print(data)

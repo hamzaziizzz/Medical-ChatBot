@@ -28,7 +28,7 @@ class AnswerSearcher:
             final_answer = "Precautions for {0} include: {1}".format(subject, '; '.join(list(set(description))[:self.num_limit]))
 
         elif question_type == 'disease_cause':
-            description = [i['m.cause'] for i in answers]
+            description = [i['m.causes'] for i in answers]
             subject = answers[0]['m.name']
             final_answer = 'The possible causes of {0} are: {1}'.format(subject, '; '.join(list(set(description))[:self.num_limit]))
 
@@ -70,7 +70,3 @@ class AnswerSearcher:
                 final_answers.append(final_answer)
 
         return final_answers
-
-
-if __name__ == "__main__":
-    searcher = AnswerSearcher()

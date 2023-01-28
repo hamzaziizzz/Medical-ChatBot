@@ -17,10 +17,10 @@ class QuestionParser:
             sql = []
 
             if question_type == "disease_cause":
-                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.cause".format(i) for i in entities]
+                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.causes".format(i) for i in entities]
 
             elif question_type == 'disease_prevention':
-                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.prevent".format(i) for i in entities]
+                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.prevention".format(i) for i in entities]
 
             elif question_type == 'disease_last_time':
                 sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.cure_last_time".format(i) for i in entities]
@@ -35,7 +35,7 @@ class QuestionParser:
                 sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.easy_get".format(i) for i in entities]
 
             elif question_type == 'disease_description':
-                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.desc".format(i) for i in entities]
+                sql = ["match (m:Disease) where m.name = '{0}' return m.name, m.description".format(i) for i in entities]
 
             elif question_type == 'disease_symptom':
                 sql = ["match (m:Disease)-[r:has_symptom]->(n:Symptom) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
@@ -98,7 +98,3 @@ class QuestionParser:
                 sqls.append(_sql)
 
         return sqls
-
-
-if __name__ == "__main__":
-    handler = QuestionParser()

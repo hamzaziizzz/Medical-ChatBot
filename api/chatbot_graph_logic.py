@@ -1,8 +1,8 @@
 import json
 
 from keras.models import model_from_json
+from keras.preprocessing.text import text_to_word_sequence
 from keras.utils import pad_sequences
-from keras.preprocessing.text import Tokenizer, text_to_word_sequence
 
 from answer_searcher import *
 from question_classifier import *
@@ -37,8 +37,6 @@ def convert_text_to_index_array(text, dictionary):
 
 
 def find_if_duplicate_questions(question_1, question_2):
-    tokenizer = Tokenizer(num_words=100000)
-
     with open("./models/dictionary.json", 'r') as dictionary_file:
         dictionary = json.load(dictionary_file)
 
@@ -88,7 +86,6 @@ class ChatBotGraph:
         self.searcher = AnswerSearcher()
 
     def chat_main(self, sent):
-        answer = "Hello, I am Mr. Healthcare. How can I help you?"
         result_classify = self.classifier.classify(sent)
 
         if not result_classify:
